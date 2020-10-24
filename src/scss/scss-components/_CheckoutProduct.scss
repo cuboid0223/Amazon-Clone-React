@@ -1,0 +1,20 @@
+.checkoutProduct {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  &__title {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  &__image {
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+  }
+  &__info {
+    padding-left: 20px;
+  }
+  &__rating {
+    display: flex;
+  }
+}
