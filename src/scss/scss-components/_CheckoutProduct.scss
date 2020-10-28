@@ -2,13 +2,16 @@
   display: flex;
   margin-bottom: 20px;
   margin-top: 20px;
+  @include iphone {
+    flex-direction: column;
+  }
   &__title {
     font-size: 17px;
     font-weight: 800;
   }
   &__image {
     object-fit: contain;
-    width: 180px;
+    width: 100%;
     height: 180px;
   }
   &__info {

@@ -52,6 +52,7 @@ const Home = () => {
         </div>
         <div className="home__row">
           <Product
+            id="22232622"
             title="Darksiders Genesis - Nephilim Edition - PC Nephilim Edition"
             price={2020}
             rating={4}

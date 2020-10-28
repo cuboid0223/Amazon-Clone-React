@@ -51,11 +51,17 @@
       font-size: 13px;
       font-weight: 800;
     }
+    @include iphone{
+      display: none;
+    }
   }
   &__optionBasket {
     display: flex;
     color: white;
     align-items: center;
+     @include iphone{
+     margin-left: 20px;
+    }
   }
   &__basketCount {
     margin-right: 10px;

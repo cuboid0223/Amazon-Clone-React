@@ -3,6 +3,10 @@
   padding: 20px;
   background-color: #fff;
   height: max-content;
+  height: 100%;
+  @include iphone{
+    flex-direction: column;
+  }
   &__ad {
     width: 100%;
     margin-bottom: 10px;

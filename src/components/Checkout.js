@@ -5,6 +5,7 @@ import { useStateValue } from "../StateProvider";
 
 const Checkout = () => {
   const [{ basket, user }, dispatch] = useStateValue();
+  console.log(basket.length);
   return (
     <div className="checkout">
       <div className="checkout__left">
@@ -16,15 +17,19 @@ const Checkout = () => {
         <div>
           <h3>Hello, {user?.email}</h3>
           <h2 className="checkout__title">你的購物車</h2>
-          {basket.map((item) => (
-            <CheckoutProduct
-              id={item.id}
-              title={item.title}
-              image={item.image}
-              rating={item.rating}
-              price={item.price}
-            />
-          ))}
+          {basket.length !== 0 
+            ? basket.map((item) => (
+                <CheckoutProduct
+                  id={item.id}
+                  title={item.title}
+                  image={item.image}
+                  rating={item.rating}
+                  price={item.price}
+                />
+              ))
+            : 
+            <h1>！？ 沒有東西喔</h1>
+          }
         </div>
       </div>
       <div className="checkout__right">
